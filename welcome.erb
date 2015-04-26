@@ -1,0 +1,255 @@
+<html>
+<head>
+  <title>LPink</title>
+  <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css","bootstrap-wysihtml5" , "paletaColores", "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", "http://fonts.googleapis.com/css?family=Pacifico" %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <%= javascript_include_tag 'https://code.jquery.com/jquery-2.1.1.min.js' %>
+  <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js' %>
+  <%= javascript_include_tag 'wysihtml-toolbar.min.js' %>
+  <%= javascript_include_tag 'advanced_and_extended.js' %>
+  <%= csrf_meta_tags %>
+</head>
+
+  <body class= "morado-claro">
+  <nav  class="morado-rosado">
+    <ul id="slide-out" class="side-nav">
+      <li><a href="/">Inicio</a></li>
+      <li><a href="#!">Mis Proyectos</a></li>
+      <li class="no-padding">
+        <ul class="collapsible collapsible-accordion">
+          <li>
+            <a class="collapsible-header">Configuracion<i class="mdi-navigation-arrow-drop-down"></i></a>
+            <div class="collapsible-body">
+              <ul>
+                <li><a href="#!">Perfil</a></li>
+                <li><a href="#!">Ajustes</a></li>
+                <li><a href="#!">Ayuda</a></li>
+                <li><a href="#!">Cerrar Sesion</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li></li>
+      <br>
+      <div class="center-align"><%= image_tag "logo3.png", :class => "responsive-img adaptarLogo2", :title => "logo"%></div>
+    </ul>
+   <div class="menupad">
+      <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+      <a href="/" class="brand-logo"><%= image_tag "logo4.png", :class => "responsive-img adaptarLogo", :title => "logo"%></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+         <li style="padding-top:10px;padding-right: 20px;"><a class="btn-floating btn red modal-trigger" href="#modal1"><i class="fa fa-user"></i></a></li>
+        
+      </ul>  
+  </div>
+        
+  </nav>
+
+     <div class="container blanco">
+
+
+     <!-- Modal Trigger -->
+ 
+
+      <!-- Modal Structure INICIO DE SESIÓN -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4 class="green-text">Inicio de sesión</h4>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field">
+                  <i class="mdi-action-account-circle prefix"></i>
+                  <input id="icon_prefix" type="text" class="validate">
+                  <label for="icon_prefix">Usuario</label>
+                </div>
+                <div class="input-field">
+                  <i class="fa fa-key prefix"></i>
+                  <input id="password" type="password" class="validate">
+                  <label for="password">Constraseña</label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class=" modal-action modal-close waves-effect waves-green btn">Listo</a>
+        </div>
+  </div>  
+
+
+
+
+</div>
+<br><br>
+ <div class="row">
+                 <div class="row container blanco">
+                 <br><br><br>
+                      <div ALIGN="right" class="col s10"><%= image_tag "welcomeMessage.png", :class => "responsive-img", :title => "mensaje"%>
+                      <h6 ALIGN="right" class="grey-text darken-2" style= " font-family: Pacifico; ">La nueva aplicación de apoyo a la gestión actas dialógicas</h6>
+                      </div>
+
+                      <br>
+                    <div class="col s12">
+                      <br><br><br>
+                      <ul class="tabs">
+                        <li class="tab col s4"><a href="#test1">Gestión de proyectos</a></li>
+                        <li class="tab col s4"><a class="active" href="#test2">Gestión de actas dialógicas</a></li>
+                        <li class="tab col s4"><a href="#test3">Trazabilidad de elementos dialógicos</a></li>
+                  
+                      </ul>
+                    </div>
+                    <div id="test1" class="row">
+                        <div class="col s4">
+                          <br><br>
+                            <div class="card small">
+                            <div class="card-image">
+                              <%= image_tag "proyectos.jpg", :class => "responsive-img", :title => "proy"%>
+                            </div>
+                            <div class="card-content">
+                              <span class="card-title activator grey-text text-darken-4">Gestión de proyectos <i class="mdi-navigation-more-vert right"></i></span>
+                            </div>
+                            <div class="card-reveal">
+                              <span class="card-title grey-text text-darken-4">Gestión de proyectos <i class="mdi-navigation-close right"></i></span>
+                              <p>Nunca más olvides un proyecto por darle importancia a otros</p>
+                            </div>
+                          </div>
+                        </div>
+                        <br><br>
+                        <div class="col s7">
+                            <br><br><br>
+                            <div class="well">
+                              <h5 class="deep-purple-text darken-4"><i class="fa fa-suitcase blue-text"></i>   Ingresa tus proyectos al sistema</h5>
+                              <p> Manten un repositorio con todos ellos, para mantener información actulizada y a la mano de cada uno.</p>
+                            </div>
+                           
+
+                        </div>
+                    </div>
+                    <div id="test2" class="row">
+                          <div class="col s4">
+                          <br><br>
+                            <div class="card small">
+                              <div class="card-image">
+                                <%= image_tag "elementos.jpg", :class => "responsive-img", :title => "elem"%>
+                              </div>
+                              <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Gestión de actas dialógicas <i class="mdi-navigation-more-vert right"></i></span>
+                                
+                              </div>
+                              <div class="card-reveal">
+                                <span class="card-title grey-text text-darken-4">Gestión de actas dialógicas <i class="mdi-navigation-close right"></i></span>
+                                <p>!Nunca más olvidaras los temas tratados en tu reunión!</p>
+                              </div>
+                            </div>
+                        </div>
+                        <br><br>
+                        <div class="col s7">
+                            <br><br><br>
+                            <div class="well">
+                              <h5 class="teal-text darken-4"><i class="fa fa-file green-text"></i>   Crea las actas de tu reunión</h5>
+                              <p> Manten un repositorio con todos ellos, para mantener información actulizada y a la mano de cada uno.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="test3" class="row">
+                           <div class="col s4">
+                          <br><br>
+                            <div class="card small">
+                                  <div class="card-image">
+                                    <%= image_tag "traza.jpg", :class => "responsive-img", :title => "traza"%>
+                                  </div>
+                                  <div class="card-content">
+                                    <span class="card-title activator grey-text text-darken-4">Trazabilidad de elementos dialógicos<i class="mdi-navigation-more-vert right"></i></span>
+                                    
+                                  </div>
+                                  <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4">Trazabilidad de elementos dialógicos <i class="mdi-navigation-close right"></i></span>
+                                    <p> Te el control absoluto de todos los COMPROMISOS, ACUERDOS, las DUDAS y los DESACUERDOS</p>
+                                  </div>
+                                </div>
+                        </div>
+                        <br><br>
+                        <div class="col s7">
+                            <br><br><br>
+                            <div class="well">
+                              <h5 class="brown-text darken-4"><i class="fa fa-cubes orange-text"></i>   Crea grafos dinámicos que relacionene tus elementos dialógicos</h5>
+                              <p> Nuestro sitema provee mecanismos de seguimiento para cada uno de tus Compromisos, Acerudos, Dudas y Desacuerdos.</p>
+                            </div>
+                           
+
+                        </div>
+
+                    </div>
+                  </div>
+    
+  
+	
+                  <div class="parallax-container">
+                  <div class="parallax"><%= image_tag "ele2.jpg", :title => "ele"%></div>
+                  </div>
+                    <div class="section white">
+                      <div class="row container">
+                        <h2 class="header">l-<span class="pink-text">pink</span> </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est ipsa neque quae, aperiam sunt labore eveniet molestias, magni sequi maiores, eligendi similique eos odio. Perspiciatis quos error laboriosam maiores numquam!
+                          <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium at cupiditate soluta asperiores id, nostrum, doloribus porro minima fugit inventore corporis officia illum repellendus explicabo molestias tempora nam quisquam.</span><span>Quidem accusamus sequi aliquid harum reiciendis dicta a deleniti, alias, iusto aspernatur, id hic, reprehenderit dolorum dignissimos odit exercitationem odio adipisci officiis amet veritatis nisi. Molestiae reprehenderit magnam, facere placeat?</span></p>
+                      </div>
+                    </div>
+                    <div class="parallax-container">
+                      <div class="parallax"><%= image_tag "ele1.jpg", :title => "ele"%></div>
+                    </div>
+
+
+      </div>
+                <footer class="page-footer">
+              <div class="container">
+                <div class="row">
+                  <div class="col l6 s12 ">
+                    <h5 class="white-text">L-Pink </h5>
+                    <p class="grey-text text-lighten-4"> Gestion de Actas Dialogicas </p>
+                  </div>
+                  <div class="col l4 offset-l2 s12 ">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                      <li><a class="grey-text text-lighten-3" href="#!">Quienes somos</a></li>
+                      <li><a class="grey-text text-lighten-3" href="#!">Preguntas frecuentes</a></li>
+                      <li><a class="grey-text text-lighten-3" href="#!">Ayuda</a></li>
+                      <li><a class="grey-text text-lighten-3" href="#!">hola</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </div>
+        
+              <div class="footer-copyright ">
+                <div class="container">
+                 © 2014 Copyright l-Pink
+                <a class="grey-text text-lighten-4 right" href="#!">Eliminar esto</a>
+                </div>
+              </div>
+            </footer>
+    <script type="text/javascript">
+  $('.button-collapse').sideNav({
+      menuWidth: 300, // Default is 240
+      edge: 'right', // Choose the horizontal origin
+      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    }
+  );
+  $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+
+    </script>
+
+      <script>
+         $(document).ready(function(){
+      $('.parallax').parallax();
+      $('ul.tabs').tabs('select_tab', 'test1');
+    });
+      </script>
+
+  </body>
+</html>
